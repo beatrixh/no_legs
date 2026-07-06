@@ -1,11 +1,100 @@
-body {
-	    max-width: 700px;
-	        margin: 50px auto;
-		    font-family: Arial, sans-serif;
-		        line-height: 1.6;
-			    padding: 0 20px;
-		    }
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-		    h1 {
-			        color: #2563eb;
-			}
+body {
+    background: #fafafa;
+    color: #222;
+    font-family: Georgia, serif;
+    line-height: 1.7;
+}
+
+/* Header */
+.hero {
+    background: #355c7d;
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+/* CSS marquee */
+.marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.marquee h1 {
+    display: inline-block;
+    padding-left: 100%;
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: bold;
+    animation: marquee 12s linear infinite;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-200%);
+    }
+}
+
+.hero p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+}
+
+/* Main content */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+section {
+    margin: 4rem 0;
+}
+
+h2 {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Image */
+.featured-image {
+    display: block;
+    max-width: 100%;
+    width: 600px;
+    margin: 2rem auto;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Gallery (if you add one later) */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.gallery img {
+    width: 100%;
+    display: block;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+    border-top: 1px solid #ddd;
+    margin-top: 3rem;
+}
