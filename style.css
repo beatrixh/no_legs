@@ -54,6 +54,35 @@ body {
     to { transform: translateX(-200%); }
 }
 
+/* SECTION */
+.post {
+    margin-bottom: 3rem;
+}
+
+/* HEADER AREA */
+.post-header {
+    margin-bottom: 1rem;
+    /*border-bottom: 2px dashed #b07a86;*/
+    padding-bottom: 0.5rem;
+}
+
+/* TITLE */
+.post-header h2 {
+    margin: 0;
+    font-size: 2rem;
+    color: #F54927;
+    text-decoration: underline wavy pink;
+}
+
+/* DATE SUBHEADER */
+.post-date {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.25rem;
+    font-style: italic;
+}
+
+
 /* TEXT */
 p {
     font-size: 1.1rem;
