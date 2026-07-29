@@ -7,6 +7,20 @@ body {
 		padding-right: 140px; /* makes room for sidebar */
 }
 
+.navbar {
+    width: 100%;
+    padding: 0.75rem 0;
+
+    border-top: 2px solid #b07a86;
+    border-bottom: 2px solid #b07a86;
+
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+    background: #8EC5FF;
+}
+
 .sidebar {
     position: fixed;
     right: 0;
@@ -121,6 +135,24 @@ h2 {
     min-width: 250px;
     margin: 1.5rem auto;
     border: 6px ridge #8EC5FF;
+}
+
+/* IMAGE GRID */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.image-grid img {
+    width: 100%;
+    display: block;
+    border: 6px ridge #8EC5FF;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;   /* Makes all images square */
 }
 
 /* FOOTER */
