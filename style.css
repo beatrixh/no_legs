@@ -161,6 +161,32 @@ h2 {
     aspect-ratio: 1 / 1;   /* Makes all images square */
 }
 
+.image-item {
+    position: relative;
+}
+
+.image-item img {
+    width: 100%;
+    display: block;
+    border: 6px ridge #8EC5FF;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+}
+
+.image-label {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+
+    padding: 0.3rem 0.6rem;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
 /* FOOTER */
 footer {
     text-align: center;
