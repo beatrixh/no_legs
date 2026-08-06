@@ -148,7 +148,7 @@ h2 {
 }
 
 .image-item.sold img {
-    opacity: 0.4;
+    opacity: 0.6;
 }
 
 .image-item.sold::after {
