@@ -12,45 +12,127 @@
   <header class="hero">
 
     <div class="marquee">
-      <h1>i have no legs</h1>
+      <h1>fewer legs</h1>
     </div>
 
     <p>
-      I have no legs (July 2026) this is my new hobby it is a website and also two (2) t shirts
+			I have no legs (July 2026) this is my new hobby it is a website and also two (2) t shirts
     </p>
 
   </header>
   <nav class="navbar">
-    <a href="index.html">would you care for a shirt</a>
+    <a href="index.html">welcome</a>
+    <a href="timeline.html">im blogging</a>
     <a href="fish.html">fish</a>
     <a href="iron_horse.html">iron horse</a>
-    <a href="timeline.html">timeline</a>
+    <a href="request_form.html">would you care for one</a>
   </nav>
 
+ <main>
 
-  <main>
-        <section class="post">
+    <div class="hero">
+        REQUEST FORM
+    </div>
+
+<form id="shirt-form" class="shop-form">
+
+    <label for="shirt">SHIRT</label>
+    <select id="shirt" name="shirt" required>
+        <option value="">SELECT A SHIRT</option>
+        <option value="Iron Horse">IRON HORSE</option>
+        <option value="Pile of Fish">PILE OF FISH</option>
+    </select>
+
+
+    <label for="size">SIZE</label>
+    <select id="size" name="size" required>
+        <option value="">SELECT A SIZE</option>
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+    </select>
+
+
+    <label for="notes">NOTES</label>
+    <textarea
+        id="notes"
+        name="notes"
+        placeholder="Is there a specific shirt already in existence (see below) you would like? Or if no, do you have color/fit preferences?"
+    ></textarea>
+
+
+    <label for="name">NAME</label>
+    <input
+        type="text"
+        id="name"
+        name="name"
+        required
+    >
+
+
+    <label for="contact">EMAIL OR NUMBER</label>
+    <input
+        type="text"
+        id="contact"
+        name="contact"
+        required
+        placeholder="How do i reach you please"
+    >
+
+
+    <label for="address">SHIPPING ADDRESS</label>
+    <textarea
+        id="address"
+        name="address"
+        required
+        placeholder="Unless youre in Seattle!"
+    ></textarea>
+
+
+    <button type="submit">
+        CLICK
+    </button>
+
+</form>
+    </form>
+
+
+    <div id="order-success" style="display: none;">
+
+        <h2>REQUEST RECEIVED!</h2>
+        <p id="order-number"></p><br>
+
+        <p>
+          I'll reach out to you to confirm! I've been cleared to drive and I have a brand new 12V battery for driving to fun places so could meet you ~somewhere~
+        </p>
+
+        <p>
+            The shirts are $23 and you can venmo me @beatrixh, but you can also wait until we confirm I can give you something you want/like.
+        </p>
+
+    </div>
+
+
+      <section class="post">
         <header class="post-header">
 
-        <h2>Eli kindly helped me try them all on for fit reference</h2>
+        <h2>Currently available</h2>
 <!--        <div class="post-date">07-24-2026</div>
  -->      </header>
-
       <p>
-        Every single shirt is a different size/cut (some mediums much smaller some much larger) photos of all of them here for reference
-
+        $23 each. They're all different sizes/colors/cuts, so here's some pictures - thanks eli :)
+      </p>
       <div class="image-grid">
 
           <div class="image-item">
               <img src="fit_images/white_large_1.jpeg" alt="">
               <div class="image-label">White L</div>
           </div>
-
           <div class="image-item">
               <img src="fit_images/white_large_2.jpeg" alt="">
               <div class="image-label">White L</div>
           </div>
-
           <div class="image-item">
               <img src="fit_images/white_large_3.jpeg" alt="">
               <div class="image-label">White L</div>
@@ -86,78 +168,121 @@
               <div class="image-label">Mustard M</div>
           </div>
 
-          <div class="image-item">
-              <img src="fit_images/blue_fem_1.jpeg" alt="">
-              <div class="image-label">Blue M</div>
+          <div class="image-item sold">
+              <img src="fit_images/large_white_green.jpeg" alt="">
+              <div class="image-label">White L (green/brown)</div>
           </div>
 
-          <div class="image-item">
-              <img src="fit_images/blue_fem_2.jpeg" alt="">
-              <div class="image-label">Blue M</div>
-          </div>
-
-          <div class="image-item">
+          <div class="image-item sold">
               <img src="fit_images/brown_1.jpeg" alt="">
               <div class="image-label">Red-Brown M</div>
           </div>
 
-          <div class="image-item">
+          <div class="image-item sold">
               <img src="fit_images/brown_2.jpeg" alt="">
               <div class="image-label">Red-Brown M</div>
           </div>
 
-          <div class="image-item">
+          <div class="image-item sold">
+              <img src="fit_images/blue_fem_1.jpeg" alt="">
+              <div class="image-label">Blue M</div>
+          </div>
+
+          <div class="image-item sold">
+              <img src="fit_images/blue_fem_2.jpeg" alt="">
+              <div class="image-label">Blue M</div>
+          </div>
+
+          <div class="image-item sold">
               <img src="fit_images/white_crop_L1.jpeg" alt="">
               <div class="image-label">White L crop</div>
           </div>
 
-          <div class="image-item">
+          <div class="image-item sold">
               <img src="fit_images/blue_L_1.jpeg" alt="">
               <div class="image-label">Blue L</div>
           </div>
 
-          <div class="image-item">
+          <div class="image-item sold">
               <img src="fit_images/blue_L_2.jpeg" alt="">
               <div class="image-label">Blue L</div>
           </div>
 
-          <div class="image-item">
+          <div class="image-item sold">
               <img src="fit_images/brown_crop_1.jpeg" alt="">
               <div class="image-label">Brown crop S</div>
           </div>
 
-          <div class="image-item">
+          <div class="image-item sold">
               <img src="fit_images/cream_crop_1.jpeg" alt="">
               <div class="image-label">Cream crop M</div>
           </div>
 
-          <div class="image-item">
+          <div class="image-item sold">
               <img src="fit_images/pink_crop_1.jpeg" alt="">
               <div class="image-label">Pink crop M</div>
           </div>
 
-          <div class="image-item">
+          <div class="image-item sold">
               <img src="fit_images/tan_large_1.jpeg" alt="">
               <div class="image-label">Tan M Oversized</div>
           </div>
 
-          <div class="image-item">
+          <div class="image-item sold">
               <img src="fit_images/tan_large_2.jpeg" alt="">
               <div class="image-label">Tan M Oversized</div>
           </div>
 
-          <div class="image-item">
+<!--           <div class="image-item">
               <img src="fit_images/white_alt_1.jpeg" alt="">
               <div class="image-label">White L Bella/Canvas</div>
           </div>
-
+ -->
       </div>
     </section>
-  </main>
+
+
+</main>
 
   <footer>
     <p>© 2026 actually in reality i have one leg</p>
   </footer>
+
+
+<script>
+
+const form = document.getElementById("shirt-form");
+
+form.addEventListener("submit", function(event) {
+
+  event.preventDefault();
+
+  const formData = new FormData(form);
+
+  // Generate a random order number
+  const orderNumber =
+    Math.floor(100000 + Math.random() * 900000).toString();
+
+  // Add it to the form data
+  formData.append("order_id", orderNumber);
+
+  fetch("https://script.google.com/macros/s/AKfycbyj3QPrhmA6S1LXW1fLq9vElpC64ohCm0mDk76A7PYRooiZlZaR5hjXexEw4YYi8oJCaA/exec", {
+    method: "POST",
+    body: new URLSearchParams(formData),
+    mode: "no-cors"
+  });
+
+  // Show confirmation
+  form.style.display = "none";
+
+  document.getElementById("order-success").style.display = "block";
+
+  document.getElementById("order-number").textContent =
+    "Rquest id #" + orderNumber + ".";
+
+});
+
+</script>
 
 </body>
 <div class="sidebar">

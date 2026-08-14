@@ -7,6 +7,10 @@ body {
 	padding-right: 140px; /* makes room for sidebar */
 }
 
+.landing-page {
+    text-align: center;
+}
+
 .navbar {
     width: 100%;
     padding: 0.75rem 0;
@@ -56,6 +60,10 @@ body {
     overflow: hidden;
     white-space: nowrap;
     margin-bottom: 1rem;
+}
+
+.slow-marquee .marquee h1 {
+    animation-duration: 130s;
 }
 
 .marquee h1 {
@@ -217,4 +225,67 @@ footer {
     font-weight: bold;
     margin-top: 3rem;
     border-top: 5px dotted #9F0712;
+}
+
+/* SHOP */
+
+.shop-form {
+    width: 90%;
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: #ffd966;
+    border: 4px ridge #8EC5FF;
+}
+
+.shop-form label {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+}
+
+.shop-form input,
+.shop-form select,
+.shop-form textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.6rem;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1rem;
+    border: 2px solid #9F0712;
+    background: #EEEEEE;
+}
+
+.shop-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.shop-form button {
+    display: block;
+    margin: 1.5rem auto 0;
+    padding: 0.75rem 1.5rem;
+
+    font-family: "Special Elite", monospace;
+    font-size: 1.2rem;
+
+    background: #8EC5FF;
+    color: #000;
+    border: 3px ridge #b07a86;
+
+    cursor: pointer;
+}
+
+.shop-form button:hover {
+    background: #d8a7b1;
+}
+
+#order-success {
+    width: 90%;
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: #d8a7b1;
+    border: 4px ridge #8EC5FF;
 }
