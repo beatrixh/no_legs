@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photography</title>
+  <style>
+    :root {
+      --gap: 8px;            /* space between photos */
+      --content-width: 40%;  /* how much of the page width the photos use */
+      --max-row-shape: 1.5;  /* no row is taller than a 3:2 landscape photo at full width */
+      --text: #222;
+      --muted: #888;
+    }
+
+    body {
+      margin: 0;
+      background: #fff;
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.6;
+    }
+
+    main {
+      width: var(--content-width);
+      margin: 0 auto;        /* centers it, leaving equal space left and right */
+      padding: 48px 0;
+    }
+
+    /* 40% gets too narrow on small screens, so widen the column there */
+    @media (max-width: 1100px) {
+      main { width: 70%; }
+    }
+    @media (max-width: 600px) {
+      main { width: auto; padding: 48px 16px; }
+    }
+
+    header.site {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+    header.site h1 {
+      font-weight: normal;
+      letter-spacing: 0.08em;
+      margin: 0;
+    }
+
+    /* ---------- one post = one batch of photos ---------- */
+    .post {
+      margin-bottom: 120px;           /* the "line breaks" between batches */
+    }
+    .post + .post {
+      padding-top: 64px;
+      border-top: 1px solid #eee;     /* delete this line if you want no divider */
+    }
+
+    .post h2 {
+      font-weight: normal;
+      margin: 0 0 4px;
+    }
+    .post time {
+      display: block;
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 16px;
+    }
+    .post p {
+      max-width: 65ch;
+      margin: 0 0 24px;
+    }
+
+    /* ---------- the gallery: set --cols on each one ---------- */
+    .gallery {
+      --cols: 3;                      /* default M if you don't set one */
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap);
+    }
+    .gallery + .gallery {
+      margin-top: var(--gap);         /* stacked galleries line up like one grid */
+    }
+
+    .gallery .row {
+      display: flex;
+      justify-content: center;        /* centers photos that hit the height cap */
+      gap: var(--gap);
+    }
+
+    /* Each photo's width is proportional to its aspect ratio (--ar, set by
+       the script), so every photo in a row ends up the same height.
+       max-width stops a row from getting taller than --max-row-shape allows,
+       which keeps a lone portrait photo from filling the whole column. */
+    .gallery img {
+      display: block;
+      flex: var(--ar, 1.5) 1 0%;
+      min-width: 0;
+      max-width: calc(100% * var(--ar, 1.5) / var(--max-row-shape));
+      height: auto;
+      aspect-ratio: var(--ar, 1.5);
+    }
+
+    /* ---------- phones: one photo per line ---------- */
+    @media (max-width: 500px) {
+      .gallery .row { flex-direction: column; align-items: center; }
+      .gallery img { flex: none; width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <h1>Film</h1>
+    </header>
+
+    <!-- ===== NEWEST POST AT THE TOP: copy this block for each new batch ===== -->
+    <article class="post">
+      <h2>First attempt</h2>
+      <!-- <time datetime="2026-09-20">September 20, 2026</time> -->
+      <p>September</p>
+
+      <div class="gallery" style="--cols: 2">
+        <img src="film/beatrix/Haddock_Haddock-R2-E062.jpg" alt="" loading="lazy">
+        <img src="film/beatrix/Haddock_Haddock-R2-E061.jpg" alt="" loading="lazy">
+      </div>
+      <div class="gallery" style="--cols: 1">
+        <img src="film/beatrix/Haddock_Haddock-R2-E060_edit.jpg" alt="" loading="lazy">
+      </div>
+      <div class="gallery" style="--cols: 2">
+        <img src="film/beatrix/Haddock_Haddock-R2-E036.jpg" alt="" loading="lazy">
+        <img src="film/beatrix/Haddock_Haddock-R2-E052.jpg" alt="" loading="lazy">
+      </div>
+      <div class="gallery" style="--cols: 1">
+        <img src="film/beatrix/Haddock_Haddock-R2-E045_cropped.jpg" alt="" loading="lazy">
+      </div>
+    </article>
+
+    <article class="post">
+      <h2>Eli's roll from Jan</h2>
+      <div class="gallery" style="--cols: 3">
+        <img src="film/eli/Haddock_Haddock-R1-E006.jpg" alt="" loading="lazy">
+        <img src="film/eli/Haddock_Haddock-R1-E001.jpg" alt="" loading="lazy">
+        <img src="film/eli/Haddock_Haddock-R1-E003.jpg" alt="" loading="lazy">
+      </div>
+      <div class="gallery" style="--cols: 2">
+        <img src="film/eli/Haddock_Haddock-R1-E015_crop.jpg" alt="" loading="lazy">
+        <img src="film/eli/Haddock_Haddock-R1-E024.jpg" alt="" loading="lazy">
+      </div>
+      <div class="gallery" style="--cols: 1">
+        <img src="film/eli/Haddock_Haddock-R1-E028.jpg" alt="" loading="lazy">
+      </div>
+      <div class="gallery" style="--cols: 2">
+        <img src="film/eli/Haddock_Haddock-R1-E011.jpg" alt="" loading="lazy">
+        <img src="film/eli/Haddock_Haddock-R1-E022.jpg" alt="" loading="lazy">
+      </div>
+      <div class="gallery" style="--cols: 1">
+        <img src="film/eli/Haddock_Haddock-R1-E029.jpg" alt="" loading="lazy">
+      </div>
+    </article>
+
+  </main>
+
+  <script>
+    // Group each gallery's images into rows of --cols, and give each image
+    // its real aspect ratio so photos in the same row share a height.
+    document.querySelectorAll('.gallery').forEach(function (gallery) {
+      var cols = parseInt(getComputedStyle(gallery).getPropertyValue('--cols'), 10) || 3;
+      var imgs = Array.from(gallery.querySelectorAll(':scope > img'));
+
+      for (var i = 0; i < imgs.length; i += cols) {
+        var row = document.createElement('div');
+        row.className = 'row';
+        imgs.slice(i, i + cols).forEach(function (img) { row.appendChild(img); });
+        gallery.appendChild(row);
+      }
+
+      imgs.forEach(function (img) {
+        function setRatio() {
+          img.style.setProperty('--ar', img.naturalWidth / img.naturalHeight);
+        }
+        if (img.complete && img.naturalWidth) setRatio();
+        else img.addEventListener('load', setRatio);
+      });
+    });
+  </script>
+</body>
+</html>
